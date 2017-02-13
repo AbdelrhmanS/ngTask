@@ -2,14 +2,14 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#/">
-                <span class="glyphicon glyphicon-home"></span> Angular Gulp Seed
+                <span class="glyphicon glyphicon-home"></span> Github Users
             </a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-            <ul class="nav navbar-nav">
-                <li class="active"><a ng-href="#/">Inicial</a></li>
-                <li><a href="#">Teste</a></li>
-                <li><a href="#">Teste 2</a></li>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6" role="naviation">
+            <ul class="nav navbar-nav navbar-right">
+                <li ui-sref-active="active"><a ng-href="#/" ui-sref="home" >Home</a></li>
+                <li ui-sref-active="active"><a href="#" ui-sref="users">Users</a></li>
+                <li ui-sref-active="active"><a href="#" ui-sref="about">About</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right acme-navbar-text">
                 <!-- Login no futuro? -->

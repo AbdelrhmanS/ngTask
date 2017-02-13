@@ -3,7 +3,8 @@
         "version": "0.12.1",
         "props": {
             "angularVersion": "~1.4.0",
-            "angularModules": [{
+            "angularModules": [
+            {
                 "key": "animate",
                 "module": "ngAnimate"
             }, {
