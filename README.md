@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Angular Seed App 
 
 [![Build Status](https://travis-ci.org/PauloLuan/angular-gulp-seed.svg)](https://travis-ci.org/PauloLuan/angular-gulp-seed)
@@ -124,3 +125,6 @@ The root directory generated for a app with name `gulpAngular` :
 ## License
 
 Angular Seed is licensed under the [MIT License](http://gomakethings.com/mit/).
+=======
+# ngTask
+>>>>>>> 93bc0dff4099563ec7f437fce091df3c6fd39ffe
