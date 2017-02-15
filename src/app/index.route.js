@@ -25,7 +25,7 @@
                 controller: 'UsersController',
                 resolve:{
                     usersData:function(UsersService){
-                        return UsersService.getUsers();
+                        return UsersService.loadMore(1);
                     }
                 }
             })
@@ -34,8 +34,9 @@
                 templateUrl: 'app/user/user.html',
                 controller: 'UserController',
                 resolve:{
-                    usersData:function($stateParams){
-                       console.log($stateParams);
+                    userData:function($stateParams,UsersService,usersData){
+                        // console.log($stateParams)
+                       return UsersService.getUser($stateParams.slug,usersData.data);
                     }
                 }
             })

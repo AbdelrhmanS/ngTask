@@ -3,14 +3,17 @@
         <acme-navbar />
     </div>
 
-    <div class="row">
-	    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 nav nav-stacked text-center ">
+    <div class="">
+	    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 nav nav-stacked text-center sidebar ">
 	        <div class="panel panel-default">
 	          <div class="panel-heading">Users</div>
-                <ul class="list-group sidebar">
-	            	<li class="list-group-item" ng-repeat="user in users"><a  href="#" ui-sref-active="active" ui-sref="users.user({slug : user.login  })">{{user.login}}</a></li>
-	            	<li class="list-group-item"><a  ng-click="" class="btn btn-warning">Load More</a></li>
+                <ul class="list-group ">
+	            	<li class="list-group-item" ng-repeat="user in users">
+	            	<a  href="#" ng-click="getUser(user.login)" ui-sref-active="active" 
+	            	ui-sref="users.user({slug : user.login  })">{{user.login}}</a></li>
+<!-- 	            	<li class="list-group-item"><a  ng-click="loadMore()" class="btn btn-warning">Load More</a></li> -->
 	            </ul>	
+	            <div class="panel-footer"><a ng-click="loadMore()" class="btn btn-warning">Load More</a></div>
 			</div>
 	    </div>
 	    <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12">
