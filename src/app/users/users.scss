@@ -1,18 +1,44 @@
-.sidebar{
-	height:100%;
-	overflow-y:auto;
+.content {
+  height: 650px;
 }
+
+
 
 .list-group-item {
+  border: none;
+}
 
-    border: none;
+.active {
+  background-color: #090909;
 }
-.list-group-item:active ,.list-group-item:focus	{
-	background-color:red;
+
+.nav {
+  li { 
+    a {
+      &:hover, &:focus {
+        background-color: #090909;
+        }
+      }
+    }
+  }
+.sidebar{
+  height: 100%;
+  overflow-y: auto;
+  .navbar-nav{
+    li{
+      float: left;
+      width: 100%;
+    }
+  }
 }
-.list-group-item>a:active 
-	background-color:red;
+
+.myimg {
+  margin: auto;
+  width: 350px;
+  height: 350px;
 }
-.list-group-item>a:focus{
-background-color:red !important;
+
+
+label{
+  float: left;
 }

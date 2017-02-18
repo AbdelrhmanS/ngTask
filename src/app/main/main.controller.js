@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('angularSeedApp')
+        .module('GithubUsers')
         .controller('MainController', MainController);
 
     /** @ngInject */

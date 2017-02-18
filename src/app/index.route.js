@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('angularSeedApp')
+        .module('GithubUsers')
         .config(routeConfig);
 
     /** @ngInject */
@@ -31,6 +31,9 @@
             })
             .state('users.user', {
                 url: '/user-:slug',
+                data: {
+                    pageTitle: "User : {{ userData.data.login }}"
+                },
                 templateUrl: 'app/user/user.html',
                 controller: 'UserController',
                 resolve:{

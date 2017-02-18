@@ -1,7 +1,20 @@
 
-<div class="jumbotron">
-	<h2> User Info </h2>
-	<img src="{{user.avatar_url}}">
-	<p>{{user.login}}</p>
-	<p>{{user.id}}</p>
+<div class=" text-center">
+	<div class="">
+		<h2> User Info </h2>
+		<hr />
+		<img src="{{user.avatar_url}}" class="thumbnail myimg">
+		<hr/>
+		<label>User Name : </label><b> <p>{{user.name}}</b></p>
+		<hr/>
+		<label>Created at : </label><p>{{user.created_at | date:"MM/dd/yyyy 'at' h:mma"}}</p>
+		<hr/>
+		<label>Email : </label><p> {{user.email}}</p>
+		<hr/>
+		<label>User id :</label><p> {{user.id}}</p>
+		<hr>
+	</div>
+		
+	
+
 </div>

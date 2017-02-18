@@ -1,19 +1,24 @@
-<nav class="navbar navbar-static-top navbar-inverse">
+<nav class="navbar navbar-static-top ">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#/">
+<!--             <a class="navbar-brand" href="#/">
                 <span class="glyphicon glyphicon-home"></span> Github Users
+            </a> -->
+            <a class="navbar-brand"  ng-href="#/" ui-sref="home"><img src="/assets/images/logo32.png">
             </a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6" role="naviation">
-            <ul class="nav navbar-nav navbar-right">
-                <li ui-sref-active="active"><a ng-href="#/" ui-sref="home" >Home</a></li>
-                <li ui-sref-active="active"><a href="#" ui-sref="users">Users</a></li>
-                <li ui-sref-active="active"><a href="#" ui-sref="about">About</a></li>
+<!--         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6" role="naviation">
+ -->    
+        <ul class="nav navbar-nav navbar-right">
+            <li ui-sref-active="active"><a ng-href="#/" ui-sref="home" >Home</a></li>
+            <li ui-sref-active="active"><a href="#" ui-sref="users">Users</a></li>
+            <li ui-sref-active="active"><a href="#" ui-sref="about">About</a></li>
+        </ul>
+<!--             <ul class="nav navbar-nav navbar-right acme-navbar-text">
+                Login no futuro? 
             </ul>
-            <ul class="nav navbar-nav navbar-right acme-navbar-text">
-                <!-- Login no futuro? -->
-            </ul>
-        </div>
+        </div> -->
     </div>
 </nav>
+
+

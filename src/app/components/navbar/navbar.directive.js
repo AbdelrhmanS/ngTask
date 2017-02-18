@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('angularSeedApp')
+        .module('GithubUsers')
         .directive('acmeNavbar', acmeNavbar);
 
     /** @ngInject */

@@ -1,6 +1,6 @@
 (function() {
     'use strict';
 
-    angular.module('angularSeedApp');
+    angular.module('GithubUsers');
 
 })();

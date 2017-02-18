@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('angularSeedApp')
+        .module('GithubUsers')
         .factory('UsersService', UsersService);
 
     /** @ngInject */
@@ -19,7 +19,7 @@
 		};
 		var loadMore = function(page){
 			console.log(page);
-			var url = 'https://api.github.com/users?per_page='+(page*30);
+			var url = 'https://api.github.com/users?per_page='+(page*10);
 	    	return $http.get(url);
 		}
 		return {getUsers: getUsers,

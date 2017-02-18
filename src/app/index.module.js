@@ -2,6 +2,6 @@
     'use strict';
 
     angular
-        .module('angularSeedApp', [ 'ngResource', 'ui.router','ngPageTitle']);
+        .module('GithubUsers', [ 'ngResource', 'ui.router','ngPageTitle']);
 
 })();
