@@ -1,116 +1,9 @@
-// (function() {
-//     'use strict';
-
-
-
-// 	describe('Users Service', function() {
-// 	  var Users ;
-// 	  var data ;
-// 	  var $httpBackend ;
-// 	  var UsersService ;
-// 	  // Load our api.users module
-// 	  beforeEach(angular.mock.module('GithubUsers'));
-
-// 	  // Set our injected Users factory (_Users_) to our local Users variable
-// 	  beforeEach(inject(function($injector ) {
-// 	  	$httpBackend = $injector.get('$httpBackend');
-// 	  	UsersService = $injector.get('UsersService');
-// 	    Users = UsersService;
-// 	    Users.getUsers().then(function(resp){
-// 			data = resp;
-// 			console.log(UsersService);
-// 			// console.log(data);
-
-// 		});
-// 	  }));
-// 		// beforeEach(inject(function($injector){
-// // 			$httpBackend = $injector.get('$httpBackend');
-// // 			usersData = $injector.get('usersData');
-// // 			// usersData = usersData;
-// // 			// $httpBackend = _$httpBackend_;
-// // 		}))
-// // $httpBackend.when('GET', 'https://api.github.com/users?per_page=1')
-// //       			.respond(200);
-// //       		console.log(usersData);
-// //       		console.log($httpBackend);
-// 	  // A simple test to verify the Users service exists
-// 	  it('Users.loadMore()).toHaveBeenCalledWith(1)', function() {
-// 		// console.log(Users.getUsers().data);
-// 			console.log(Users);
-// 		$httpBackend.when('GET', 'https://api.github.com/users?per_page=1').respond(function(status, data, headers, statusText){
-// 			console.log(data)
-// 			console.log(status)
-// 			console.log(header)
-// 			return [200, data, {}];
-//  		});
-// 			console.log(data)
-// 			console.log(Users.getUsers().success(function(res){
-// 				console.log(res)
-// 			}));
-
-// 	    expect(Users.getUsers()).toBeDefined();
-// 	    // expect(Users.loadMore()).toHaveBeenCalledWith(1);
-// 	  });
-
-// 	  it('LoadMore with page 1 == getUsers', function() {
-// 	    expect(Users.loadMore().data).toEqual(Users.getUsers().data);
-// 	  });
-// 	  // A set of tests for our Users.all() method
-// 	  describe('.getUser()', function() {
-// 	    // A simple test to verify the method all exists
-// 	    it('should exist', function() {
-// 	      expect(Users.getUser()).toBeDefined();
-// 	    });
-// 	  });
-// 	});
-
-
-  // })();
-
-// (function() {
-//     'use strict';
-//     var users = [
-//     {
-//     	login:'aa',
-//     	name:'AA'
-//     },
-//     {
-//     	login:'qq',
-//     	name :'QQ'
-//     }];
-//     var $httpBackend;
-//     var UsersService;
-// 	beforeEach(inject(function($injector){
-// 				$httpBackend = $injector.get('$httpBackend');
-// 				UsersService = $injector.get('UsersService');
-// 				// usersData = usersData;
-// 				// $httpBackend = _$httpBackend_;
-// 			}))
-// 	it('should get login success',function(){
-
-// 	    $httpBackend.when('GET', 'https://api.github.com/users?per_page=1').respond({'data': users});
-// 		console.log(UsersService);
-// 	    UsersService.getUsers()
-// 	      .then(function(data) {
-// 	      	console.log(data);
-// 	        expect(data).toBeTruthy();
-// 	    });
-
-// 	  	$httpBackend.flush();
-// 		})
-
-//   } ) ();
-
-
-
-
-
 
 
 (function() {
     'use strict';
 
-	describe('Users Service Test', function() {
+	describe('Services ', function() {
 		var users = [
 	      {
 	        "login": "mojombo",
@@ -686,51 +579,31 @@
 		  }
 		];
 		var UsersService ;
-	    var $httpBackend ;
 		beforeEach(module('GithubUsers'));
 
-		beforeEach(inject(function(_UsersService_,_$httpBackend_) {
+		beforeEach(inject(function(_UsersService_) {
 			UsersService = _UsersService_;
-	        $httpBackend =_$httpBackend_;
 		}));
 
 		it('Test get Users using service ', function() {
-	        var response ;
-	        $httpBackend.when('GET','https://api.github.com/users?per_page=1')
-	        .respond(200,users);
 	        UsersService.getUsers()
 	        .then(function(data){
-	            response = data;
-	            console.log(UsersService);
-				expect(response).toEqual(users);
+				expect(data).toEqual(users);
 	        });
-
 		});
 
 		it('Test get User using UsersService ', function() {
-	        var response ;
-	        $httpBackend.when('GET','https://api.github.com/users/'+users[0].login)
-	        .respond(200,users[0].login);
 	        UsersService.getUser(users[0].login,users)
 	        .then(function(data){
-	            response = data;
-	            console.log(UsersService);
-				expect(response).toBe(users[0]);
+				expect(data).toBe(users[0]);
 	        });
-
 		});
 
 		it('Test Load more page 2 using UsersService ', function() {
-	        var response ;
-	        $httpBackend.when('GET','https://api.github.com/users?per_page=20')
-	        .respond(200,Userspage2);
-	        UsersService.getUser(2)
+	        UsersService.loadMore(2)
 	        .then(function(data){
-	            response = data;
-	            console.log(UsersService);
-				expect(response).toBe(Userspage2);
+				expect(data).toBe(Userspage2);
 	        });
-
 		});
 	});
  } ) ();

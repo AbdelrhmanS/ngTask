@@ -8,7 +8,7 @@ Make sure these are installed first.
 ### Quick Start
 
 1. In bash/terminal/command line, `cd` into your project directory.
-2. Run `npm install -g yo bower grunt-cli gulp && npm install && bower install` to install required dependencies.
+2. Run `sudo npm install -g yo bower grunt-cli gulp && sudo npm install && bower install` to install required dependencies.
 3. When it's done installing, run one of the task runners to get going:
 
 ## Gulp tasks
@@ -39,9 +39,6 @@ Make sure these are installed first.
 
 AngularJS: HTML enhanced for web apps!
 https://angularjs.org/
-
-Angular Material Design: The Angular reference implementation of the Google's Material Design specification.
-https://material.angularjs.org/#/
 
 Sass (Node): Node.js binding to libsass, the C version of the popular stylesheet preprocessor, Sass.
 https://github.com/sass/node-sass

@@ -5,8 +5,8 @@
 
         beforeEach(module('GithubUsers'));
 
-        it('main controller is defined', inject(function($controller) {
-            var vm = $controller('MainController');
+        it('about controller is defined', inject(function($controller) {
+            var vm = $controller('AboutController');
 
             expect(vm).toBeDefined();
         }));

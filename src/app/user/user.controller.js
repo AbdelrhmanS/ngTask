@@ -6,7 +6,7 @@
         .controller('UserController', UserController);
 
     /** @ngInject */
-    function UserController($stateParams,$scope,userData) {
+    function UserController($scope,userData) {
     	console.log($scope);
     	console.log(userData);
     	$scope.user = userData.data;
