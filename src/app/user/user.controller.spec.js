@@ -196,7 +196,6 @@
 	    ];
 	    var user={data:''};
 	    var $controller;
-    	var userData ={data:users};
     	var scope ;
     	var UsersService;
         beforeEach(module('GithubUsers'));
@@ -214,7 +213,7 @@
         it('User controller is defined', inject(function($controller) {
         	UsersService.getUser(users[2].login,users)
 	        .then(function(data){
-				user.data = data
+				user.data = data;
 				$controller('UserController',{$scope: scope , userData : user });
 	            expect($controller).toBeDefined();
 	        });
@@ -223,7 +222,7 @@
         it('User controller have object user', inject(function($controller) {
         	UsersService.getUser(users[2].login,users)
 	        .then(function(data){
-				user.data = data
+				user.data = data;
 				$controller('UserController',{$scope: scope , userData : user });
             	expect(scope.user).toBe(user);
 	        });

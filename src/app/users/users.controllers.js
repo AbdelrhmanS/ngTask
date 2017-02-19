@@ -6,7 +6,7 @@
         .controller('UsersController', UsersController);
 
     /** @ngInject */
-    function UsersController(usersData ,UsersService ,$scope,$state,$stateParams) {
+    function UsersController(usersData ,UsersService ,$scope,$state) {
     	$scope.users = usersData.data;
     	$scope.page = 1;
     	if($state.params.slug == null ){
@@ -20,6 +20,6 @@
     			usersData.data = response;
     		});
 
-    	}
+    	};
     }
 })();
